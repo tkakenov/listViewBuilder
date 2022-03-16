@@ -68,10 +68,7 @@ class UserInfo extends StatelessWidget {
           const SizedBox(
             height: 24,
           ),
-          const Divider(
-            indent: 16,
-            endIndent: 16,
-          ),
+          const Divider(),
           const SizedBox(
             height: 12,
           ),

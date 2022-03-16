@@ -30,13 +30,13 @@ class _UserBtnListState extends State<UserBtnList> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-          child: Text("Select type",
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-              ).copyWith(height: 1.5)),
+        Text("Select type",
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+            ).copyWith(height: 1.5)),
+        const SizedBox(
+          height: 14,
         ),
         SizedBox(
           height: 32,
@@ -44,7 +44,6 @@ class _UserBtnListState extends State<UserBtnList> {
             itemCount: level.length,
             separatorBuilder: (context, index) => const SizedBox(width: 12),
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 16),
             itemBuilder: (context, index) => UserBtnItem(
               title: level[index],
               index: index,
@@ -59,10 +58,7 @@ class _UserBtnListState extends State<UserBtnList> {
         const SizedBox(
           height: 16,
         ),
-        const Divider(
-          indent: 16,
-          endIndent: 16,
-        )
+        const Divider()
       ],
     );
   }
